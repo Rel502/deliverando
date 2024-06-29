@@ -1,8 +1,36 @@
 function init() {
     includeHTML();
     renderFood();
-    renderBasket(); 
+    renderBasket();
+    changeLikeIcon();
 }
+
+let isLiked = false;
+
+function toggleLike() {
+    isLiked = !isLiked;
+
+    setArrayToLocalStorage('isLiked', isLiked);
+    changeLikeIcon();
+}
+
+function changeLikeIcon() {
+    let likeIcon = document.getElementById('likeIcon');
+
+    isLiked = getArrayFromLocalStorage('isLiked');
+    
+    if (isLiked) {
+        likeIcon.src = "../assets/img/01_icons/heart.png";
+    } else {
+        likeIcon.src = "../assets/img/01_icons/like.png";
+    }
+}
+
+/*---> Like Counter soll erhöht / verringert werden 
+        --> ID vergeben
+        --> let likes = number
+        --> function add/disLike
+*/
 
 function renderFood() {
     let content = document.getElementById('foodContent');
