@@ -1,0 +1,87 @@
+/* --------------------> FONTS.CSS <--------------------
+
+    PROJECT:        deliverando 
+                    (Lieferando Clon)
+
+    AUTHOR:         Michael Zeitler
+                    Dieburger Str. 52
+                    60386 Frankfurt am Main
+
+    BIRTHDATE:      1987-02-05
+
+    -----> 01) SIZES        ln. 10-30
+    -----> 02) COLORS       ln. ...
+    -----> 03) FAMILIES     ln. ...
+    -----> 04) WEIGHT       ln. ...
+
+------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* ----------> SIZES <---------- */
+
+.fnt-sz-xs {
+    font-size: 12px;
+}
+
+.fnt-sz-s {
+    font-size: 12px;
+}
+
+.fnt-sz-m {
+    font-size: 16px;
+}
+
+.fnt-sz-l {
+    font-size: 24px;
+}
+
+.fnt-sz-xl {
+    font-size: 32px;
+}
+
+/* ----------> COLORS <---------- */
+
+.clr-lightgrey {
+    color: rgb(136, 136, 136);
+}
+
+.clr-lightgrey-hvr {
+    color: rgb(136, 136, 136);
+}
+
+.clr-lightgrey-hvr:hover {
+    color: rgb(24, 24, 24);
+}
+
+/* ----------> WEIGHT & STYLE <---------- */
+
+.wght-regular {
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fnt-style-italic {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.wght-600 {
+    font-weight: 600;
+    font-style: normal;
+}
+
+.wght-bold {
+    font-weight: 700;
+    font-style: normal;
+}

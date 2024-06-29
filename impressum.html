@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deliverando</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="./design/logo_icon.png" type="image/icon type">
+    <!-- FONTS GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+    <link rel="stylesheet" href="./style/mqueries.css">
+    <!-- <link rel="stylesheet" href="./style/flexbox.css"> -->
+    <!-- JS -->
+    <script src="./js/script.js"></script>
+    <script src="./js/templates.js"></script>
+    <script src="./js/help_functions.js"></script>
+</head>
+
+<body onload="includeHTML()">
+
+    <div w3-include-html="./templates/header.html"></div>
+
+    <section class="impressum sctn-pad">
+        <h1 class="mbse-h1">Impressum</h1>
+        <h2 class="mbse-h2">Angaben gem. §5 TMG</h2>
+        <p>
+            Michael Zeitler <br>
+            Dieburger Straße 52 <br>
+            60386 Frankfurt am Main <br>
+        </p>
+        <h2 class="mbse-h2">Kontakt</h2>
+        <p>
+            Telefon: 01627033002 <br>
+            E-Mail: m.zeitler(at)gmail.com
+        </p>
+        <p>
+            Quelle: <a href="https://www.e-recht24.de">e-Recht24</a>
+        </p>
+    </section>
+
+    <div class="footer-fixed-bottom" w3-include-html="./templates/footer.html"></div>
+</body>
+
+</html>

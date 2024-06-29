@@ -1,0 +1,434 @@
+* {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* -----> PADDING & MARGIN <-------------- */
+
+.mbse-h1 {
+    margin-block-start: 8px;
+    margin-block-end: 16px;
+}
+
+.mbse-h2 {
+    margin-block-start: 8px;
+    margin-block-end: 8px;
+}
+
+h3 {
+    margin-block-start: 8px;
+    margin-block-end: 8px;
+}
+
+.reset-mbse {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.vert-gap-card {
+    gap: 16px;
+}
+
+.mbse-resp {
+    margin-block-start: 16px;
+    margin-block-end: 8px;
+}
+
+.mtb-50 {
+    margin: 50px auto;
+}
+
+/* ---> Margin-Block for headline elements on mobile devices */
+
+.sctn-pad {
+    padding: 24px 8px 8px 12px;
+}
+
+.mid-content-pad {
+    padding: 24px 16px;
+}
+
+/* ---> Section Padding */
+
+.sctn-mar {
+    margin-top: 50px;
+}
+
+.mt-popup-txt {
+    margin-top: 25vh;
+}
+
+.pb-l {
+    padding-bottom: 24px;
+}
+
+.mt-l {
+    margin-top: 24px;
+}
+
+.mt-s {
+    margin-top: 8px;
+}
+
+.mb-m {
+    margin-bottom: 16px;
+}
+
+.gap-s {
+    gap: 8px;
+}
+
+.gap-m {
+    gap: 16px;
+}
+
+.gap-l {
+    gap: 24px;
+}
+
+.gap-xl {
+    gap: 32px;
+}
+
+/* -----> GENERAL <---------------------- */
+
+.pos-relative {
+    position: relative;
+}
+
+.z-index-icon {
+    z-index: 3;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button {
+    color: black;
+}
+
+.icons {
+    height: 24px;
+    object-fit: cover;
+}
+
+.icon-gap {
+    gap: 8px;
+}
+
+.dots {
+    height: 16px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.txt-deco-underln {
+    text-decoration: underline;
+}
+
+.txt-algn-c {
+    text-align: center;
+}
+
+/* -----> PAGE CONTENT STARTS HERE <----- */
+
+header {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* LOGO */
+header img {
+    height: 32px;
+}
+
+.hero-section {
+    height: 25vh;
+    background-image: url("../assets/img/hero.jpg");
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    border-radius: 0 0 10px;
+}
+
+.restaurant-img {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    right: 0;
+    height: 64px;
+    border-radius: 0 10px;
+}
+
+.nav-wrapper {
+    overflow-x: auto;
+}
+
+.category-nav {
+    display: flex;
+    flex-shrink: 0;
+    overflow-x: auto;
+    gap: 8px;
+    align-items: center;
+    padding: 16px;
+}
+
+.category-nav a {
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #f4f4f4;
+}
+
+.category-nav a:hover {
+    background-color: #e9e9e9;
+}
+
+/* -----> MID CONTENT - CARD <----- */
+
+.mid-content {
+    background-color: #f9f9f9;
+}
+
+.card {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    align-items: flex-start;
+
+    border: solid 1px #ddd;
+    border-radius: 10px;
+    padding: 12px 12px;
+    margin: 12px 0;
+    filter: drop-shadow(1px 1px 3px #ddd);
+}
+
+.card:hover {
+    cursor: pointer;
+    /* border: solid 1px rgba(0, 0, 0, 0.3); */
+    /* background-color: #f4f4f4; */
+    background-color: rgb(245,245,245);
+}
+
+.add-icon {
+    height: 44px;
+}
+
+/* -----> BASKET MOBILE <----- */
+
+.to-basket-bar {
+    display: flex;
+    margin: 4px;
+    /* padding: 8px; */
+    /* border-top: 1px solid #ddd; */
+    position: sticky;
+    bottom: 8px;
+    background-color: white;
+}
+
+.basket-btn {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(255 241 210);
+}
+
+.basket-btn:hover {
+    background-color: rgb(255, 235, 200);
+}
+
+.basket-counter {
+    position: absolute;
+    top: -9px;
+    left: -6px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 100%;
+    width: 20px;
+    color: white;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -----> BASKET OVERLAY <----- */
+
+.basket-overlay {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 998;
+    overflow-y: auto;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3));
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.basket-overlay table {
+    width: 100%;
+    border-spacing: 8px;
+}
+
+.basket-overlay td {
+    text-align: end;
+}
+
+.pay-btn {
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255 241 210);
+    width: 100%;
+}
+
+.inactive-btn {
+    background-color: #ddd;
+}
+
+.infobox-basket {
+    margin: 32px 0;
+    background-color: #ffff0024;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.infobox-basket p {
+    font-size: 14px;
+}
+
+.pay-btn:hover {
+    background-color: rgb(255, 235, 200);
+}
+
+.inactive-btn:hover {
+    background-color: #ddd;
+}
+
+.order-complete-popup {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 999;
+
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.popup-header {
+    height: 100px;
+    background-color: rgb(255 241 210);
+    padding-left: 16px;
+}
+
+/* -----> FOOTER <----- */
+
+footer {
+    background-color: rgb(39 39 39);
+    padding: 8px 16px;
+}
+
+footer img {
+    height: 48px;
+}
+
+footer .legal-links {
+    display: flex;
+    gap: 16px;
+}
+
+.legal-links a {
+    color: antiquewhite;
+}
+
+.legal-links a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* -----> FLEXBOX <---------------------- */
+
+.d-flex {
+    display: flex;
+}
+
+.jstf-c {
+    justify-content: center;
+}
+
+.jstf-spc-btwn {
+    justify-content: space-between;
+}
+
+.jstf-spc-around {
+    justify-content: space-around;
+}
+
+.jstf-end {
+    justify-content: flex-end;
+}
+
+.jstf-start {
+    justify-content: flex-start;
+}
+
+.algn-base {
+    align-items: baseline;
+}
+
+.algn-c {
+    align-items: center;
+}
+
+.algn-flex-end {
+    align-items: flex-end;
+}
+
+.drctn-col {
+    flex-direction: column;
+}
+
+.d-none {
+    display: none;
+}

@@ -1,0 +1,107 @@
+/* ----------> MEDIAQUERIES <-----------------
+
+    PROJECT:        deliverando 
+                    (Lieferando Clon)
+
+    AUTHOR:         Michael Zeitler
+                    Dieburger Str. 52
+                    60386 Frankfurt am Main
+
+    BIRTHDATE:      1987-02-05
+
+-------------------------------------------*/
+
+@media (min-width: 521px) {
+    header img {
+        height: 40px;
+    }
+    .hero-section {
+        height: 32vh;
+        background-position: 45% 55%;
+    }
+
+    .mid-content-pad {
+        padding: 24px 32px;
+    }
+
+    .card {
+        padding: 16px 12px;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero-section {
+        height: 40vh;
+        background-position: 45% 55%;
+    }
+
+    .mid-content-pad {
+        padding: 24px 64px;
+    }
+}
+
+@media (min-width: 1025px) {
+    header img {
+        height: 40px;
+    }
+    header {
+        padding: 16px;
+    }
+    .mid-content-pad {
+        padding: 24px 128px;
+    }
+    .card {
+        padding: 24px 12px;
+    }
+}
+
+@media (min-width: 1201px) {
+    header img {
+        height: 48px;
+    }
+    header {
+        padding: 20px;
+    }
+    .basket-overlay {
+        display: block;
+        left: auto;
+        /* border-left: 1px solid #ddd; */
+        right: 0;
+        top: 0;
+        bottom: auto;
+        position: sticky;
+        width: 24vw;
+        float: right;
+        /* min-height: 100vh; */
+    }
+
+    main {
+        margin-right: 24vw;
+    }
+
+    .to-basket-bar {
+        display: none;
+    }
+
+    .hide-on-desktop {
+        display: none;
+    }
+
+    .card {
+        padding: 32px 12px;
+    }
+
+    .hero-section {
+        height: 50vh;
+        background-position: 47% 53%;
+    }
+
+    .mid-content-pad {
+        padding: 24px 228px;
+    }
+
+    footer {
+        height: 100px;
+    }
+}
+
