@@ -1,16 +1,3 @@
-/* ----------> MEDIAQUERIES <-----------------
-
-    PROJECT:        deliverando 
-                    (Lieferando Clon)
-
-    AUTHOR:         Michael Zeitler
-                    Dieburger Str. 52
-                    60386 Frankfurt am Main
-
-    BIRTHDATE:      1987-02-05
-
--------------------------------------------*/
-
 @media (min-width: 521px) {
     header img {
         height: 40px;

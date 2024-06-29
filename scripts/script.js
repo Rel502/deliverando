@@ -1,17 +1,3 @@
-/* --------------------> SCRIPT.JS <--------------------
-
-    PROJECT:        deliverando 
-                    (Lieferando Clon)
-    
-    AUTHOR:         Michael Zeitler
-                    Dieburger Str. 52
-                    60386 Frankfurt am Main
-
-    BIRTHDATE:      1987-02-05
-
--------------------------------------------------------*/
-
-// INIT
 function init() {
     includeHTML();
     renderFood();
