@@ -20,9 +20,9 @@ function changeLikeIcon() {
     isLiked = getArrayFromLocalStorage('isLiked');
     
     if (isLiked) {
-        likeIcon.src = "../assets/img/01_icons/heart.png";
+        likeIcon.src = "./assets/img/01_icons/heart.png";
     } else {
-        likeIcon.src = "../assets/img/01_icons/like.png";
+        likeIcon.src = "./assets/img/01_icons/like.png";
     }
 }
 
