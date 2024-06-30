@@ -193,6 +193,15 @@ header img {
     overflow-x: auto;
 }
 
+.category-nav-wrapper {
+    position: sticky;
+    top: -1px;
+    background-color: white;
+    z-index: 3;
+    border-bottom: 1px solid #ddd;
+    font: -webkit-small-control;
+}
+
 .category-nav {
     display: flex;
     flex-shrink: 0;
