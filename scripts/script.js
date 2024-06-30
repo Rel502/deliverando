@@ -26,46 +26,46 @@ function changeLikeIcon() {
     }
 }
 
-/*---> Like Counter soll erhöht / verringert werden 
-        --> ID vergeben
-        --> let likes = number
-        --> function add/disLike
-*/
-
 function renderFood() {
     let content = document.getElementById('foodContent');
     clearInnerHTML('foodContent');
 
     for (let i = 0; i < food.length; i++) {
-        const name = food[i]['name'];
-        const price = food[i]['price'];
+        const foodObj = food[i];
+        const category = foodObj['category'];
 
-        content.innerHTML += returnFood(name, price, i);
+        content.innerHTML += returnFoodCategory(category, i);
+
+        for (let j = 0; j < foodObj['dishes'].length; j++) {
+            const dish = foodObj['dishes'][j];
+            const price = foodObj['prices'][j];
+            const description = foodObj['descriptions'][j];
+            content.innerHTML += returnDishes(dish, price, description, i);
+        }
     }
 }
 
-function handleCardClick(event, name, price, i) {
-
+function handleCardClick(event, dish, price, i) {
     if (event.target.classList.contains('icons')) {
         return;
     }
 
-    addToBasket(name, price, i);
+    addToBasket(dish, price, i);
 }
 
 function handleCardInfoClick(event) {
     event.stopPropagation();
 }
 
-function addToBasket(name, price, i) {
-    let index = basket.indexOf(name);
+function addToBasket(dish, price, i) {
+    let index = basket.indexOf(dish);
 
     if (index == -1) {
-        basket.push(name);
+        basket.push(dish);
         prices.push(price);
         amounts.push(1);
     } else {
-        amounts[index]++;   /*---> Menge um 1 erhöhen, wenn sich das Gericht bereits im Warenkorb befindet */
+        amounts[index]++;   
     }
 
     saveBasket();
@@ -76,7 +76,7 @@ let basket = [];
 let prices = [];
 let amounts = [];
 
-let fee = 1.29;     /*---> Delivery costs */
+let fee = 1.29;     
 
 // RENDER BASKET --------------------------------------------------
 function renderBasket() {
@@ -99,11 +99,9 @@ function renderBasket() {
             content.innerHTML += returnBasketHTML(dish, amount, price, i);
         }
         renderToBasketBar();
-        /*---> rendering bottom-bar on mobile devices; 
-          ---> only visible, if basked is not empty*/
         renderBasketAccounting(sum);
-        /*---> rendering sub total, delivery costs, total sum & order button */
     }
+
     updateBasketCounter();
 }
 
@@ -117,7 +115,6 @@ function loadBasket() {
     } else {
         return []
     }
-
 }
 
 function decreaseAmount(i) {
@@ -156,7 +153,7 @@ function orderComplete() {
     showScrollbar();
     resetArrays(basket, prices, amounts);
     document.getElementById('basketAccounting').innerHTML = '';
-    clearInnerHTML('toBasketBar');  /* Element by ID ---> .innerHTML = '' */
+    clearInnerHTML('toBasketBar');  
     saveBasket();
     renderBasket();
 }
@@ -252,4 +249,3 @@ function hideScrollbar() {
 function showScrollbar() {
     document.querySelector('body').classList.remove('overflow-hidden');
 }
-

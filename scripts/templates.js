@@ -1,17 +1,27 @@
-function returnFood(name, price, i) {
+function returnFoodCategory(category, i) {
     return /*html*/`
-        <div id="card" onclick="handleCardClick(event, '${name}', ${price}, ${i})" class="card">
-
-        <div class="d-flex drctn-col vert-gap-card">
-            <div class="d-flex">
-                <h3 class="reset-mbse">${name}</h3>
-                <img id="cardInfo${i}" onclick="handleCardInfoClick(event)" class="icons pointer" src="./assets/img/01_icons/info.png" alt="Info">
-            </div>
-            <p><span>${formattPrice(price)}</span> €</p>
+        <div id="${category}" class="category-img category-bg${i}">
+            <h3 class="dancing-script">${category}</h3>
         </div>
+    `;
+}
 
-        <img class="add-icon pointer"
-            src="./assets/img/01_icons/add.png" alt="Hinzufügen">
+function returnDishes(dish, price, description, i) {
+    return /*html*/`
+        <div id="card" onclick="handleCardClick(event, '${dish}', ${price}, ${i})" class="card">
+
+            <div class="d-flex drctn-col vert-gap-card">
+                <div class="d-flex">
+                    <h3 class="reset-mbse">${dish}</h3>
+                    <img id="cardInfo${i}" onclick="handleCardInfoClick(event)" class="icons pointer" src="./assets/img/01_icons/info.png" alt="Info">
+                </div>
+                <div>
+                    <p>${description}</p>
+                </div>
+                <p><span>${formattPrice(price)}</span> €</p>
+            </div>
+
+            <img class="add-icon pointer" src="./assets/img/01_icons/add.png" alt="Hinzufügen">
         </div>
     `;
 }

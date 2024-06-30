@@ -1,3 +1,37 @@
+/* ---> Container for food category banner images <-------------- */
+
+.category-img {
+    height: 150px;
+    filter: drop-shadow(1px 2px 3px black);
+}
+
+.category-img > h3 {
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #494949;
+    font-size: 32px;
+}
+
+.category-bg0 {
+    background-image: url("../assets/img/beliebt.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category-bg1 {
+    background-image: url("../assets/img/vorspeisen.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category-bg2 {
+    background-image: url("../assets/img/salate.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---> Individual Scrollbar <----------------------------------- */
+
 /* width */
 ::-webkit-scrollbar {
     width: 12px;

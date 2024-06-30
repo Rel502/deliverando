@@ -10,6 +10,13 @@ a {
     font-optical-sizing: auto;
 }
 
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
 /* ----------> SIZES <---------- */
 
 .fnt-sz-xs {
