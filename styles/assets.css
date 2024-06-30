@@ -5,7 +5,7 @@
     filter: drop-shadow(1px 2px 3px black);
 }
 
-.category-img > h3 {
+.category-img>h3 {
     padding: 8px;
     background-color: rgba(255, 255, 255, 0.7);
     color: #494949;
@@ -26,6 +26,48 @@
 
 .category-bg2 {
     background-image: url("../assets/img/salate.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category-bg3 {
+    background-image: url("../assets/img/fleisch.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category-bg4 {
+    background-image: url("../assets/img/fisch.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category-bg5 {
+    background-image: url("../assets/img/vegetarisch.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category-bg6 {
+    background-image: url("../assets/img/dessert.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category-bg7 {
+    background-image: url("../assets/img/biere.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category-bg8 {
+    background-image: url("../assets/img/wein.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.category-bg9 {
+    background-image: url("../assets/img/alkoholfrei.jpg");
     background-size: cover;
     background-position: center;
 }
