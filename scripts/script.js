@@ -18,7 +18,7 @@ function changeLikeIcon() {
     let likeIcon = document.getElementById('likeIcon');
 
     isLiked = getArrayFromLocalStorage('isLiked');
-    
+
     if (isLiked) {
         likeIcon.src = "./assets/img/01_icons/heart.png";
     } else {
@@ -69,7 +69,7 @@ function addToBasket(dish, price, i) {
         prices.push(price);
         amounts.push(1);
     } else {
-        amounts[index]++;   
+        amounts[index]++;
     }
 
     saveBasket();
@@ -89,11 +89,10 @@ let basket = [];
 let prices = [];
 let amounts = [];
 
-let fee = 1.29;     
+let fee = 1.29;
 
 function renderBasket() {
     let sum = 0;    /*<--- Product of price & amount for each dish */
-
     let content = document.getElementById('basketContent');
     content.innerHTML = '';
 
@@ -102,19 +101,27 @@ function renderBasket() {
     if (basket.length == 0) {
         showPlaceholder();
     } else {
-        for (let i = 0; i < basket.length; i++) {
-            const dish = basket[i];
-            const price = prices[i];
-            const amount = amounts[i];
-            sum += price * amount;
-
-            content.innerHTML += returnBasketHTML(dish, amount, price, i);
-        }
-        renderToBasketBar();
-        renderBasketAccounting(sum);
+        sum = processBasket(content, sum);
+        renderBasketBottom(sum);
     }
-
     updateBasketCounter();  /*<--- displayed on mobile devices / sticky button */
+}
+
+function processBasket(content, sum) {
+    for (let i = 0; i < basket.length; i++) {
+        const dish = basket[i];
+        const price = prices[i];
+        const amount = amounts[i];
+        sum += price * amount;
+
+        content.innerHTML += returnBasketHTML(dish, amount, price, i);
+    }
+    return sum;
+}
+
+function renderBasketBottom(sum) {
+    renderToBasketBar();
+    renderBasketAccounting(sum);
 }
 
 function loadBasket() {
@@ -164,7 +171,7 @@ function orderComplete() {
     showScrollbar();
     resetArrays(basket, prices, amounts);
     document.getElementById('basketAccounting').innerHTML = '';
-    clearInnerHTML('toBasketBar');  
+    clearInnerHTML('toBasketBar');
     saveBasket();
     renderBasket();
 }
