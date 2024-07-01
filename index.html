@@ -30,122 +30,80 @@
 
     <!-- BASKET -->
     <!-- POPUP(MAX-WIDTH: 1200px) / SIDEBAR(MIN-WIDTH: 1201px) -->
-    <section id="basketOverlay" class="basket-overlay sctn-pad d-none">
-        <img onclick="hideBasketOverlay()" class="hide-on-desktop icons pointer" src="./assets/img/01_icons/left.png"
-            alt="Zurück">
 
-        <h2 class="border-bottom txt-algn-c mbse-resp pb-l">Warenkorb</h2>
-
-        <div id="basketContent">
-            <!-- <div class="d-flex jstf-spc-btwn sctn-pad">
-                                <div class="d-flex algn-base gap-s">
-                                    <span>3</span>
-                                    <p>Gyros mit Pommes</p>
-                                </div>
-                                <div>
-                                    13,20 €
-                                </div>
-                            </div>
-                
-                            <div class="d-flex jstf-end">
-                                <div class="d-flex algn-c jstf-spc-around gap-m">
-                                    <img class="pointer" src="./img/01_icons/minus.png" alt="Menge reduzieren">
-                                    <span>3</span>
-                                    <img class="pointer" src="./img/01_icons/add.png" alt="Menge erhöhen">
-                                </div>
-                            </div> -->
-        </div>
-
-        <div id="basketAccounting">
-            <!-- <table class="sctn-mar">
-                                <tr>
-                                    <td>Zwischensumme</td>
-                                    <td><span id="subTotal"></span> €</td>
-                                </tr>
-                                <tr>
-                                    <td>Lieferkosten</td>
-                                    <td><span id="deliveryCosts">1,29</span> €</td>
-                                </tr>
-                                <tr>
-                                    <td><b>Gesamt</b></td>
-                                    <td><span id="totalPrice">1,29</span> €</td>
-                                </tr>
-                            </table>
-                            <button class="pay-btn">
-                                <h2>Bezahlen (<span id="payBtnSum">14,49</span>€)</h2>
-                            </button> -->
-        </div>
-    </section>
 
 
     <!-- MAIN CONTENT -->
     <main>
-        <section class="hero-section">
-            <!-- BACKGROUND-IMAGE: ./img/hero.jpg -->
-            <img class="restaurant-img" src="./assets/img/athenos.png" alt="">
+        <section id="basketOverlay" class="basket-overlay sctn-pad d-none">
+            <img onclick="hideBasketOverlay()" class="hide-on-desktop icons pointer"
+                src="./assets/img/01_icons/left.png" alt="Zurück">
+            <h2 class="border-bottom txt-algn-c mbse-resp pb-l">Warenkorb</h2>
+            <div id="basketContent"></div>
+            <div id="basketAccounting"></div>
         </section>
 
-        <section class="top-content sctn-pad">
-            <div class="d-flex jstf-spc-btwn">
-                <h1>Athenos - Griechische Küche</h1>
-                <div class="d-flex icon-gap">
-                    <img class="icons pointer" src="./assets/img/01_icons/info.png" alt="About">
-                    <img onclick="toggleLike()" id="likeIcon" class="icons pointer" src="./assets/img/01_icons/like.png"
-                        alt="Like">
+        <div class="main-wrapper">
+            <section class="hero-section">
+                <!-- BACKGROUND-IMAGE: ./img/hero.jpg -->
+                <img class="restaurant-img" src="./assets/img/athenos.png" alt="">
+            </section>
+
+            <section class="top-content sctn-pad">
+                <div class="d-flex jstf-spc-btwn">
+                    <h1>Athenos - Griechische Küche</h1>
+                    <div class="d-flex icon-gap">
+                        <img class="icons pointer" src="./assets/img/01_icons/info.png" alt="About">
+                        <img onclick="toggleLike()" id="likeIcon" class="icons pointer"
+                            src="./assets/img/01_icons/like.png" alt="Like">
+                    </div>
+                </div>
+                <div class="d-flex algn-flex-end gap-s">
+                    <img class="icons mt-l" src="./assets/img/01_icons/star.png" alt="Stars">
+                    <p>3.7 <span class="txt-deco-underln wght-bold">(200+)</span></p>
+                </div>
+                <div class="d-flex algn-c mt-s gap-s">
+                    <img class="icons" src="./assets/img/01_icons/box.png" alt="Mindestbestellwert">
+                    <p>Min. 9,99 €</p>
+                    <img class="dots" src="./assets/img/01_icons/dot.png" alt="Trennpunkt">
+                    <img class="icons" src="./assets/img/01_icons/delivery.png" alt="Liefergebühr">
+                    <p>1,29 €</p>
+                </div>
+            </section>
+
+            <!-- CATEGORY-NAV -->
+            <div class="category-nav-wrapper">
+                <div class="nav-wrapper d-flex">
+                    <nav class="category-nav wght-600">
+                        <img class="icons pointer" src="./assets/img/01_icons/search.png" alt="Suchen">
+                        <a class="clr-lightgrey-hvr" href="#Beliebt">Beliebt</a>
+                        <a class="clr-lightgrey-hvr" href="#Vorspeisen">Vorspeisen</a>
+                        <a class="clr-lightgrey-hvr" href="#Salate">Salate</a>
+                        <a class="clr-lightgrey-hvr" href="#Fleisch">Fleisch</a>
+                        <a class="clr-lightgrey-hvr" href="#Fisch">Fisch</a>
+                        <a class="clr-lightgrey-hvr" href="#Vegetarisch">Vegetarisch</a>
+                        <a class="clr-lightgrey-hvr" href="#Dessert">Dessert</a>
+                        <a class="clr-lightgrey-hvr" href="#Biere">Biere</a>
+                        <a class="clr-lightgrey-hvr" href="#Wein">Wein</a>
+                        <a class="clr-lightgrey-hvr" href="#Alkoholfrei">Alkoholfreie Getränke</a>
+                    </nav>
                 </div>
             </div>
-            <div class="d-flex algn-flex-end gap-s">
-                <img class="icons mt-l" src="./assets/img/01_icons/star.png" alt="Stars">
-                <p>3.7 <span class="txt-deco-underln wght-bold">(200+)</span></p>
-            </div>
-            <div class="d-flex algn-c mt-s gap-s">
-                <img class="icons" src="./assets/img/01_icons/box.png" alt="Mindestbestellwert">
-                <p>Min. 9,99 €</p>
-                <img class="dots" src="./assets/img/01_icons/dot.png" alt="Trennpunkt">
-                <img class="icons" src="./assets/img/01_icons/delivery.png" alt="Liefergebühr">
-                <p>1,29 €</p>
-            </div>
 
+            <section class="mid-content mid-content-pad">
+                <!-- HEADLINE MID-CONTENT / ABOVE DISHES -->
+                <div class="d-flex algn-c mb-m">
+                    <h2>Täglich frisch zubereitet</h2>
+                    <img class="icons" src="./assets/img/01_icons/heart.png" alt="Herz">
+                </div>
 
-        </section>
+                <!-- FOOD CONTENT / CARDS -->
+                <div id="foodContent">
+                </div>
+            </section>
 
-        <!-- CATEGORY-NAV -->
-        <div class="category-nav-wrapper">
-            <div class="nav-wrapper d-flex">
-                <nav class="category-nav wght-600">
-                    <img class="icons pointer" src="./assets/img/01_icons/search.png" alt="Suchen">
-                    <a class="clr-lightgrey-hvr" href="#Beliebt">Beliebt</a>
-                    <a class="clr-lightgrey-hvr" href="#Vorspeisen">Vorspeisen</a>
-                    <a class="clr-lightgrey-hvr" href="#Salate">Salate</a>
-                    <a class="clr-lightgrey-hvr" href="#Fleisch">Fleisch</a>
-                    <a class="clr-lightgrey-hvr" href="#Fisch">Fisch</a>
-                    <a class="clr-lightgrey-hvr" href="#Vegetarisch">Vegetarisch</a>
-                    <a class="clr-lightgrey-hvr" href="#Dessert">Dessert</a>
-                    <a class="clr-lightgrey-hvr" href="#Biere">Biere</a>
-                    <a class="clr-lightgrey-hvr" href="#Wein">Wein</a>
-                    <a class="clr-lightgrey-hvr" href="#Alkoholfrei">Alkoholfreie Getränke</a>
-                </nav>
-            </div>
-        </div>
-
-        <section class="mid-content mid-content-pad">
-            <!-- HEADLINE MID-CONTENT / ABOVE DISHES -->
-            <div class="d-flex algn-c mb-m">
-                <h2>Täglich frisch zubereitet</h2>
-                <img class="icons" src="./assets/img/01_icons/heart.png" alt="Herz">
-            </div>
-
-            <!-- FOOD CONTENT / CARDS -->
-            <div id="foodContent">
-            </div>
-        </section>
-
-        <!-- TO BASKET BAR - MOBILE (RENDERING) -->
-        <div id="toBasketBar" class="to-basket-bar">
-            <!-- <button onclick="toggleBasketOverlay('basketOverlay')" class="basket-btn">
-                <img class="icons" src="./img/01_icons/basket.png" alt="Warenkorb">
-                <h2>Warenkorb (<span id="toBasketBtnMobile">...</span> €)</h2>
-            </button> -->
+            <!-- TO BASKET BAR - MOBILE (RENDERING) -->
+            <div id="toBasketBar" class="to-basket-bar"></div>
         </div>
     </main>
 
@@ -161,6 +119,7 @@
         </div>
     </div>
 
+    <!-- FOOTER TEMPLATE -->
     <div w3-include-html="./templates/footer.html"></div>
 </body>
 

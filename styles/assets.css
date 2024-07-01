@@ -95,3 +95,9 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #ffd894;
 }
+
+/* ---> Increase / Reduce Amount <--------------------------------- */
+
+.reduce-increase-div {
+    padding: 0 8px;
+}

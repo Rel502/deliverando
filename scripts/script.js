@@ -26,7 +26,7 @@ function changeLikeIcon() {
     }
 }
 
-function renderFood() {
+function renderFood() { /*<--- Categories with bg-image */
     let content = document.getElementById('foodContent');
     clearInnerHTML('foodContent');
 
@@ -35,13 +35,17 @@ function renderFood() {
         const category = foodObj['category'];
 
         content.innerHTML += returnFoodCategory(category, i);
+        renderFoodContent(content, foodObj, i);
 
-        for (let j = 0; j < foodObj['dishes'].length; j++) {
-            const dish = foodObj['dishes'][j];
-            const price = foodObj['prices'][j];
-            const description = foodObj['descriptions'][j];
-            content.innerHTML += returnDishes(dish, price, description, i);
-        }
+    }
+}
+
+function renderFoodContent(content, foodObj, i) { /*<--- Dishes, description, price */
+    for (let j = 0; j < foodObj['dishes'].length; j++) {
+        const dish = foodObj['dishes'][j];
+        const price = foodObj['prices'][j];
+        const description = foodObj['descriptions'][j];
+        content.innerHTML += returnDishes(dish, price, description, i);
     }
 }
 
@@ -72,15 +76,23 @@ function addToBasket(dish, price, i) {
     renderBasket();
 }
 
+function deleteFromBasket(position) {
+    basket.splice(position, 1);
+    prices.splice(position, 1);
+    amounts.splice(position, 1);
+
+    saveBasket();
+    renderBasket();
+}
+
 let basket = [];
 let prices = [];
 let amounts = [];
 
 let fee = 1.29;     
 
-// RENDER BASKET --------------------------------------------------
 function renderBasket() {
-    let sum = 0;    /*---> Product of price & amount for each dish */
+    let sum = 0;    /*<--- Product of price & amount for each dish */
 
     let content = document.getElementById('basketContent');
     content.innerHTML = '';
@@ -102,7 +114,7 @@ function renderBasket() {
         renderBasketAccounting(sum);
     }
 
-    updateBasketCounter();
+    updateBasketCounter();  /*<--- displayed on mobile devices / sticky button */
 }
 
 function loadBasket() {
@@ -141,7 +153,6 @@ function increaseAmount(i) {
     renderBasket();
 }
 
-// ---> Popup which is displayed, when pay button is clicked
 function showOrderComplete() {
     showElement('orderCompletePopup');
     hideBasketOverlay();
@@ -173,7 +184,6 @@ function updateBasketCounter() {
 
     for (let i = 0; i < amounts.length; i++) {
         const amount = amounts[i];
-
         basketCounter += amount;
     }
 

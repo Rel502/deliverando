@@ -62,21 +62,18 @@
     }
     .basket-overlay {
         display: block;
-        height: 80.5vh;
-        max-height: calc(100vh - 100px);
+        height: 100vh;
         left: auto;
-        /* border-left: 1px solid #ddd; */
         right: 0;
         top: 0;
         bottom: auto;
         position: sticky;
-        width: 24vw;
+        width: 350px;
         float: right;
-        /* min-height: 100vh; */
     }
 
-    main {
-        margin-right: 24vw;
+    .main-wrapper {
+        margin-right: 350px;
     }
 
     .mid-content {
@@ -106,11 +103,5 @@
 
     footer {
         height: 100px;
-    }
-}
-
-@media (min-width: 1413px) {
-    .basket-overlay {
-        height: 78.7vh;
     }
 }

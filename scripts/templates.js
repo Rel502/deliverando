@@ -42,7 +42,8 @@ function returnBasketHTML(dish, amount, price, i) {
         </div>
         <!---------------------------------->
         <!-- 2) REDUCE <> INCREASE AMOUNT -->
-        <div class="d-flex jstf-end">
+        <div class="reduce-increase-div d-flex jstf-spc-btwn algn-c">
+            <img onclick="deleteFromBasket(${i})" id="delete${i}" class="icons pointer" src="./assets/img/01_icons/delete.png">
             <div class="d-flex algn-c jstf-spc-around gap-m">
                 <!-- DECREASE AMOUNT -->
                 <img onclick="decreaseAmount(${i})" class="pointer" src="./assets/img/01_icons/minus.png" alt="Menge reduzieren">
