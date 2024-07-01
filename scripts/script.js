@@ -163,12 +163,12 @@ function increaseAmount(i) {
 function showOrderComplete() {
     showElement('orderCompletePopup');
     hideBasketOverlay();
-    hideScrollbar();
+    hideOrShowScrollbar('hide');
 }
 
 function orderComplete() {
     hidePopup('orderCompletePopup');
-    showScrollbar();
+    hideOrShowScrollbar('show');
     resetArrays(basket, prices, amounts);
     document.getElementById('basketAccounting').innerHTML = '';
     clearInnerHTML('toBasketBar');
@@ -251,18 +251,18 @@ function calcSum(amount, price) {
 
 function showBasketOverlay() {
     showElement('basketOverlay');
-    hideScrollbar();
+    hideOrShowScrollbar('hide');
 }
 
 function hideBasketOverlay() {
     hideElement('basketOverlay');
-    showScrollbar();
+    hideOrShowScrollbar('show');
 }
 
-function hideScrollbar() {
-    document.querySelector('body').classList.add('overflow-hidden');
-}
-
-function showScrollbar() {
-    document.querySelector('body').classList.remove('overflow-hidden');
+function hideOrShowScrollbar(param) {
+    if (param == 'hide') {
+        document.querySelector('body').classList.add('overflow-hidden');
+    } else if (param == 'show') {
+        document.querySelector('body').classList.remove('overflow-hidden');
+    }
 }
